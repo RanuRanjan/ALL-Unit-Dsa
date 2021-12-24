@@ -1,12 +1,12 @@
 function runProgram(input) {
    
-    var newInput=input.trim().split(" \n")
+    var newInput=input.trim().split("\n")
 
     var len= +newInput[0]
 
     var arr= newInput[1].trim().split(" ").map(Number)
     
-    
+    console.log(arr);
 }
 if (process.env.USERNAME === "ranus") {
    runProgram(`4
