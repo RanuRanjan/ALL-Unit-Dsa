@@ -42,28 +42,28 @@
 
 
 
-const product=[
-    {
-        productId:1,productname:"tesla",price:200
-    },
-    {
-        productId:2,productname:"bmw",price:300
-    },
-    {
-        productId:3,productname:"vm",price:50
-    }
+// const product=[
+//     {
+//         productId:1,productname:"tesla",price:200
+//     },
+//     {
+//         productId:2,productname:"bmw",price:300
+//     },
+//     {
+//         productId:3,productname:"vm",price:50
+//     }
 
-]
+// ]
 
-const lowhigh=product.slice(0).sort((a,b)=>{
-    return  a.price -b.price
-})
-const highlow=product.slice(0).sort((a,b)=>{
-    return  b.price -a.price
-})
-console.log(highlow);
-console.log(lowhigh);
-console.log(product)
+// const lowhigh=product.slice(0).sort((a,b)=>{
+//     return  a.price -b.price
+// })
+// const highlow=product.slice(0).sort((a,b)=>{
+//     return  b.price -a.price
+// })
+// console.log(highlow);
+// console.log(lowhigh);
+// console.log(product)
 
 
 //  function comapare( a, b ) {
@@ -80,3 +80,47 @@ console.log(product)
 
 // console.log(sortpro);
 
+
+// function hello(a){
+//     console.log(arguments);
+// }
+
+// (a)=>{
+//     console.log(arguments);
+// }
+
+// const kitchen = {
+//     name: "kitchen",
+//     purpose: "cook",
+//     order: "meal",
+
+//     cookFood() {
+//       console.log(`Serving ${this.order} in 2 mins`);
+//     },
+//   };
+
+
+
+
+
+//   const bedroom = {
+//     name: "bedroom",
+//     purpose: "sleep",
+//     order: "magiee",
+   
+//   };
+
+//   kitchen.cookFood.call(bedroom);
+
+
+// function aa(){
+//     console.log("hhh");
+// }
+
+// console.log(aa.bb="hij");
+
+
+num =0
+console.log(num++);
+console.log(++num);
+console.log(num);
