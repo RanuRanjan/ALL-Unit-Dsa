@@ -2,7 +2,7 @@ function runProgram(input) {
     var arr =input.trim().split(" ").map(Number)
    var n=arr.length
    var min,max
-   //  console.log(newInput);
+   //  console.log(newInput);     [2,5,1,7]
     if(n==1){
        max=arr[0]
        min=arr[0]
