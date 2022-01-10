@@ -1,11 +1,23 @@
-
-  function runProgram(input) {
-    var newInput = input.trim().split("\n");
+function con(n){
+  if(n){
+    console.log(n);
+  }
+  else{
+      con(n/2)
+        console.log(n%2);
+  }
   
+}
+  function runProgram(input) {
+    var newInput = input.trim().split(" ").map(Number);
+    var num= +newInput[0]
+    console.log(newInput);
+    
+    con(num)
     
   }
   if (process.env.USERNAME === "ranus") {
-    runProgram(``);
+    runProgram(`4`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
