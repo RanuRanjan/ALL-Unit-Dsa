@@ -1,7 +1,14 @@
 let ans = [];
 
 function solve(arr) {
-  
+    let obj = {};
+    for (let i = 0; i < arr.length; i++) {
+        let str = arr[i].split("").sort().join("");
+        if (!obj[str]) {
+            ans.push(arr[i]);
+            obj[str] = 1;
+        }
+    }
 }
 
 
@@ -11,8 +18,11 @@ function runProgram(input) {
 
     var newInput= input.trim().split("\n");
    
-    let arr = newInput.slice(1).map((el) => el.trim());
-solve(arr)
+    for(var i=1;i<newInput.length;i++){
+        var  str= newInput[i].trim().split(" ")
+        console.log(str);
+    }
+    solve(str)
 
      console.log(ans.sort().join("\n"));
  }

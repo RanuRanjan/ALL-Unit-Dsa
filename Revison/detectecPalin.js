@@ -1,3 +1,30 @@
+let ans = [];
+
+function palindrome(str) {
+    let obj = {};
+    let oddCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (!obj[str[i]]) {
+            obj[str[i]] = 1;
+            oddCount++;
+        } else {
+            obj[str[i]]++;
+            if (obj[str[i]] % 2 === 0) oddCount--;
+            else oddCount++;
+        }
+    }
+    if (oddCount > 1) {
+
+        return "Not Possible!";
+    }
+    else{
+        return "Possible!";
+    } 
+}
+
+
+
+
 function runProgram(input) {
     // Write code here
     var input = input.trim().split("\n");
@@ -7,33 +34,7 @@ function runProgram(input) {
         // console.log(arr)
         greater(arr)
     }
-    function greater(arr) {
-        let j = 0;
-        let k = arr.length - 1;
-        while (j < k) {
-            let temp = arr[j]
-            arr[j] = arr[k]
-            arr[k] = temp
-
-            j++
-            k--
-        }
-        // console.log(arr)
-        let stack = []
-        let res = []
-        for (let i = 0; i < arr.length; i++) {
-            while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
-                stack.pop()
-            }
-            if (stack.length == 0) {
-                res.push(-1)
-            } else {
-                res.push(stack[stack.length - 1])
-            }
-            stack.push(arr[i])
-        }
-        // console.log(res.join(" "))
-        reverse(res)
+   
     }
 
     function reverse(arr) {

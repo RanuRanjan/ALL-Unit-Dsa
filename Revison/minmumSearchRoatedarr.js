@@ -1,30 +1,35 @@
-function reduceString(str) {
-    let stack = [];
-  
-
-    for (let i = 0; i < str.length; i++) {
-        if (stack[stack.length - 1] == str[i])
-            stack.pop();
-        else
-            stack.push(str[i]);
+function minimumsearch(arr) {
+   
+    var start=0;
+    var end=arr.length-1
+    var res=arr[0]
+    while(start<=end){
+        var mid=start+(Math.floor(end-start)/2)
+        if(arr[mid]<res){
+           res=arr[mid]
+           end =mid-1
+        }
+        else{
+            start=mid+1
+        }
+        
     }
-    if (stack.length == 0)
-        return "Empty String"
-    else
-        return stack.join("");
+    return res
+    
 }
 
 
 function runProgram(input) {
    
-    var newInput=input.trim().split(" ")
+    var newInput=input.trim().split("\n")
     // var  row=4
-    var str=newInput[0]
-    console.log(str);
-    console.log(reduceString(str));
+    var arr=newInput[1].trim().split(" ").map(Number)
+    console.log(arr);
+    console.log(minimumsearch(arr));
 }
 if (process.env.USERNAME === "ranus") {
-   runProgram(`aaabbbccddd`);
+   runProgram(`10
+   4 6 7 9 10 -1 0 1 2 3`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");

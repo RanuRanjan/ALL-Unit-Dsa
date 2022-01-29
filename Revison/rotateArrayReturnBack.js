@@ -1,28 +1,20 @@
-function fact(n){
-    if(n<=1){
-        return n;
-    }
-    return  fact(n-1) +fact(n-2)
+function minimumsearch(arr) {
+   
+   
 }
-// FIXME: normall fib
 
-// if(n==0){
-//     return 0
-// }
-// if(n==1||n==2){
-//     return 1
-// }
-
-// return fact(n-1)+fact(n-2)
 
 function runProgram(input) {
    
-    var num=input.trim().split(" ").map(Number)
-    console.log(num);
-    console.log(fact(num));
+    var newInput=input.trim().split("\n")
+    // var  row=4
+    var arr=newInput[1].trim().split(" ").map(Number)
+    console.log(arr);
+    console.log(minimumsearch(arr));
 }
 if (process.env.USERNAME === "ranus") {
-   runProgram(`5`);
+   runProgram(`10
+   4 6 7 9 10 -1 0 1 2 3`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");

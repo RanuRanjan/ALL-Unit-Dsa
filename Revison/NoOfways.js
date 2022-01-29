@@ -1,28 +1,28 @@
-function fact(n){
-    if(n<=1){
-        return n;
+function ways(num){
+    if(num==0){
+        return 1
     }
-    return  fact(n-1) +fact(n-2)
+    if(num==1){
+       return 1
+    }
+    else if(num==2){
+        return 2
+    }
+
+   return  ways(num-3)+ways(num-2)+ways(num-1)
 }
-// FIXME: normall fib
 
-// if(n==0){
-//     return 0
-// }
-// if(n==1||n==2){
-//     return 1
-// }
-
-// return fact(n-1)+fact(n-2)
 
 function runProgram(input) {
    
-    var num=input.trim().split(" ").map(Number)
-    console.log(num);
-    console.log(fact(num));
+    var newInput=input.trim().split(" ")
+
+    var num=newInput[0].trim().split(" ").map(Number)
+
+   console.log(ways(num));
 }
 if (process.env.USERNAME === "ranus") {
-   runProgram(`5`);
+   runProgram(`4`);
 } else {
    process.stdin.resume();
    process.stdin.setEncoding("ascii");
