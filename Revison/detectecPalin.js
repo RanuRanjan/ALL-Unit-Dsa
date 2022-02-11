@@ -1,25 +1,30 @@
-let ans = [];
-
 function palindrome(str) {
     let obj = {};
-    let oddCount = 0;
     for (let i = 0; i < str.length; i++) {
         if (!obj[str[i]]) {
             obj[str[i]] = 1;
-            oddCount++;
         } else {
-            obj[str[i]]++;
-            if (obj[str[i]] % 2 === 0) oddCount--;
-            else oddCount++;
+            obj[str[i]]+=1;
+            
         }
     }
-    if (oddCount > 1) {
+    // console.log(obj);
+    let oddCount = 0;
+    for(key in obj){
+        // console.log(key);
+      if(obj[key]%2==1){
+        oddCount++
+    }
+
+    }
+    if (oddCount >1) {
 
         return "Not Possible!";
     }
     else{
         return "Possible!";
     } 
+    
 }
 
 
@@ -30,32 +35,18 @@ function runProgram(input) {
     var input = input.trim().split("\n");
 
     for (let i = 2; i < input.length; i += 2) {
-        let arr = input[i].trim().split(" ").map(Number)
+        let arr = input[i].trim().split("")
         // console.log(arr)
-        greater(arr)
+       console.log(palindrome(arr)) 
     }
    
     }
-
-    function reverse(arr) {
-        let j = 0;
-        let k = arr.length - 1;
-        while (j < k) {
-            let temp = arr[j]
-            arr[j] = arr[k]
-            arr[k] = temp
-
-            j++
-            k--
-        }
-        console.log(arr.join(" "))
-    }
-
-}
 if (process.env.USERNAME === "ranus") {
-    runProgram(`1
-    4
-    1 3 2 4`);
+    runProgram(`2
+    6
+    aabbcc
+    5
+    aabcd`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

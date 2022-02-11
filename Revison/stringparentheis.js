@@ -1,6 +1,9 @@
 function stringparen(str){
     var stack=[]
     // console.log(str);
+    if(str.length%2==1){
+        console.log("Not Balanced")
+    }
     for(let i=0;i<str.length;i++){
         if(str[i] == '('||str[i]=="{"||str[i]=="["){
           stack.push(str[i])
@@ -17,10 +20,10 @@ function stringparen(str){
     }
     // console.log(stack);
     if(stack.length>0){
-        console.log("No");
+        console.log("Not Balanced");
     }
     else{
-        console.log("Yes");
+        console.log("Balanced");
     }
 }
 
