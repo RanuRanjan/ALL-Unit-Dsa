@@ -28,9 +28,33 @@
 // console.log(arr.length);
 // log
 
-console.log(1<2<3);
-console.log(3>2>1);
+console.log(1<3);
+console.log(3>2);
+console.log(true>1);
 
-css  interview center a div
+console.log(0==true);
 
-how mays we forms in react
+
+
+let obj={
+    x:2,
+    y:3
+}
+
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+// console.log(Object(obj));
+
+
+
+
+
+
+
+
+
+
+// (3>2>1) true 1
+// css  interview center a div
+
+// how mays we forms in react
